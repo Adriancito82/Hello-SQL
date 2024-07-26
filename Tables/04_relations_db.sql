@@ -37,3 +37,17 @@ CREATE TABLE users_languages(
     FOREIGN KEY(language_id) REFERENCES languages(language_id),
     UNIQUE (user_id, language_id)
 );
+
+-- INSERT
+INSERT INTO dni (dni_number, user_id) VALUES (33333333, 3);
+INSERT INTO dni (dni_number, user_id) VALUES (44444444, 4);
+
+INSERT INTO companies (name) VALUES ('Apple');
+INSERT INTO companies (name) VALUES ('Google');
+INSERT INTO companies (name) VALUES ('Microsoft');
+
+UPDATE users SET company_id = 1 WHERE user_id = 1;
+UPDATE users SET company_id = 1 WHERE user_id = 3;
+UPDATE users SET company_id = 3 WHERE user_id = 2;
+UPDATE users SET company_id = 3 WHERE user_id = 5;
+UPDATE users SET company_id = 2 WHERE user_id = 10;
